@@ -1,0 +1,75 @@
+﻿<h3>Url</h3>
+
+<div class="col-lg-12">
+    <form id="urlAnalysisForm">
+        <div class="form-group">
+            <input id="sourceUrl" class="form-control" placeholder="http://www.example.com" />
+        </div>
+        <button id="analyzeUrlButton" type="submit" class="btn btn-primary pull-right">Analyze</button>
+    </form>
+</div>
+<div class="col-lg-12">
+
+    <div id="wordResultPanel" class="panel panel-default hidden">
+        <div class="panel-heading">Word Frequency</div>
+        <div class="panel-body">
+            <table id="urlWordResult"
+                   class="table table-striped"
+                   data-paging="true"
+                   data-paging-limit="10"
+                   data-filtering="true"
+                   data-filter-delay="1000"
+                   data-sorting="true">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th data-filterable="false" data-type="number">Frequency</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="metaKeyordResultPanel" class="panel panel-default hidden">
+        <div class="panel-heading">Meta Keyword Frequency</div>
+        <div class="panel-body">
+            <table id="metaKeywordResult"
+                   class="table table-striped"
+                   data-paging="true"
+                   data-paging-limit="10"
+                   data-filtering="true"
+                   data-filter-delay="1000"
+                   data-sorting="true">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th data-filterable="false" data-type="number">Frequency</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="linkResultPanel" class="panel panel-default hidden">
+        <div class="panel-heading">External Link</div>
+        <div class="panel-body">
+            <table id="linkResult"
+                   class="table table-striped"
+                   data-paging="true"
+                   data-paging-limit="10"
+                   data-filtering="true"
+                   data-filter-delay="1000"
+                   data-sorting="true">
+                <thead>
+                    <tr>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <a id="back" href='@Url.Action("Index", "Url")' class="pull-right hidden">Different Url?</a>
+</div>
